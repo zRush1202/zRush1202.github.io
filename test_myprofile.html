@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyễn Phú Trọng - My Space</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background: linear-gradient(90deg, #1e90ff, #00bfff);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: relative;
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            position: absolute;
+            top: 20px;
+            left: calc(50% - 75px);
+        }
+
+        header h1 {
+            margin: 180px 0 0;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #4682b4;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .nav-box {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+            text-align: center;
+            width: 120px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-box a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        section h2 {
+            font-size: 2em;
+            border-bottom: 3px solid #1e90ff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #1e90ff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: #f4f4f9;
+            margin: 10px 0;
+            padding: 10px;
+            border-left: 4px solid #1e90ff;
+        }
+
+        ul li strong {
+            color: #1e90ff;
+        }
+
+        a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .fade-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://via.placeholder.com/150" alt="Nguyễn Phú Trọng">
+        <h1>Nguyễn Phú Trọng - My Space</h1>
+    </header>
+    <nav>
+        <div class="nav-box" data-target="home">
+            <img src="https://via.placeholder.com/50" alt="Trang chủ">
+            <a href="#home">Trang chủ</a>
+        </div>
+        <div class="nav-box" data-target="about">
+            <img src="https://via.placeholder.com/50" alt="Giới thiệu">
+            <a href="#about">Giới thiệu</a>
+        </div>
+        <div class="nav-box" data-target="experience">
+
+            <img src="https://via.placeholder.com/50" alt="Kinh nghiệm">
+            <a href="#experience">Kinh nghiệm</a>
+        </div>
+        <div class="nav-box" data-target="skills">
+            <img src="https://via.placeholder.com/50" alt="Kỹ năng">
+            <a href="#skills">Kỹ năng</a>
+        </div>
+        <div class="nav-box" data-target="projects">
+            <img src="https://via.placeholder.com/50" alt="Dự án">
+            <a href="#projects">Dự án</a>
+        </div>
+        <div class="nav-box" data-target="contact">
+            <img src="https://via.placeholder.com/50" alt="Liên hệ">
+            <a href="#contact">Liên hệ</a>
+        </div>
+    </nav>
+    <section id="home">
+        <h2>Chào mừng đến với trang cá nhân của tôi</h2>
+        <p>Trang này là nơi tôi chia sẻ về bản thân, kinh nghiệm làm việc, kỹ năng và dự án đã làm. Hãy khám phá và tìm
+            hiểu thêm về tôi!</p>
+    </section>
+    <section id="about" class="hidden">
+        <h2>Giới thiệu bản thân</h2>
+        <p>Xin chào! Tôi là Nguyễn Phú Trọng. Tôi là một nhà phát triển phần mềm với nhiều năm kinh nghiệm trong việc
+            phát triển các ứng dụng web và di động. Tôi đam mê công nghệ và luôn tìm cách học hỏi những điều mới.</p>
+    </section>
+    <section id="experience" class="hidden">
+        <h2>Kinh nghiệm</h2>
+        <ul>
+            <li><strong>Công ty ABC</strong> - Nhà phát triển phần mềm (2018 - nay)</li>
+            <li><strong>Công ty XYZ</strong> - Lập trình viên (2015 - 2018)</li>
+        </ul>
+    </section>
+    <section id="skills" class="hidden">
+        <h2>Kỹ năng</h2>
+        <ul>
+            <li>Ngôn ngữ lập trình: JavaScript, Python, Java</li>
+            <li>Frameworks: React, Angular, Django</li>
+            <li>Công cụ: Git, Docker, Kubernetes</li>
+        </ul>
+    </section>
+    <section id="projects" class="hidden">
+        <h2>Dự án</h2>
+        <ul>
+            <li><strong>Project A</strong> - Mô tả ngắn gọn về dự án này.</li>
+            <li><strong>Project B</strong> - Mô tả ngắn gọn về dự án này.</li>
+        </ul>
+    </section>
+    <section id="contact" class="hidden">
+        <h2>Liên hệ</h2>
+        <p>Email: <a href="mailto:nguyenphutrong@example.com">nguyenphutrong@example.com</a></p>
+    </section>
+    <footer>
+        &copy; 2024 Nguyễn Phú Trọng
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var navBoxes = document.querySelectorAll('.nav-box');
+            var sections = document.querySelectorAll('section');
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            navBoxes.forEach(box => {
+                box.addEventListener('click', function () {
+                    sections.forEach(section => {
+                        section.classList.add('hidden');
+                    });
+                    var target = document.getElementById(this.getAttribute('data-target'));
+                    target.classList.remove('hidden');
+                    window.scrollTo(0, target.offsetTop - 50);  // Adjust the scroll position if needed
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
